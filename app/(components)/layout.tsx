@@ -1,9 +1,9 @@
 "use client"
 import React, { useContext, useEffect, useMemo, useState } from 'react'
 import { connect } from 'react-redux';
-import  * as switcherdata from '../../shared/data/switcherdata/switcherdata';
 import { ThemeChanger } from '@/shared/redux/action';
 import { Initialload } from '@/shared/contextapi';
+import { LocalStorageBackup } from '@/shared/data/switcherdata/switcherdata';
 
 function Layout({children, local_varaiable, ThemeChanger}:any) {
   const customstyles :any= {
@@ -21,7 +21,7 @@ function Layout({children, local_varaiable, ThemeChanger}:any) {
   useEffect(() => {
     if (typeof window !== 'undefined' && !theme.pageloading) {
       console.log("gdgggg",!theme.pageloading)
-      switcherdata.LocalStorageBackup(ThemeChanger, theme.setpageloading);
+      LocalStorageBackup(ThemeChanger, theme.setpageloading);
     }
   }, []);
 
