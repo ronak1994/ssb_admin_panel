@@ -1,4 +1,3 @@
-import { Itemsdata1 } from "../data/pages/ecommerces/ecommercedata";
 
 let initialState = {
     lang: "en",
